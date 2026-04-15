@@ -1,0 +1,19 @@
+    <html>
+    <head><title>Temperature Converter</title></head>
+    <body>
+       <label>Temperature in °C:</label>
+       <input type="number" id="tempC"/><br/>
+       <label>Temperature in °F:</label>
+       <h1 id="tempF"></h1> 
+    </body>
+    <script>
+        function convert(){
+            const tempC=document.querySelector('#tempC');
+            const tempF=(tempC.value*9/5)+32;
+            const h1element=document.querySelector('#tempF');
+            h1element.innerText=tempF;
+        }
+        const tempC=document.querySelector('#tempC');
+        tempC.addEventListener('input', convert);
+    </script>
+</html>
